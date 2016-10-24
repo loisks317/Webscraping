@@ -1,0 +1,22 @@
+#
+# This code uses BeautifulSoup to scrape www.innocentheroine.com (lo's blog)
+# for certain words. This is meant to be an intro to get your feet wet
+#
+# LKS, October 2016
+#
+#
+from bs4 import BeautifulSoup # this gets us our webscraper. If you run
+# this code and it errors here, try reinstalling beautifulsoup (pip install
+# BeautifulSoup)
+import urllib # urllib and urllib2 work together to make your life easier when scripting
+import urllib2 # see above
+import sys  # without this, you will run into recursion limit errors, and as it is, you might anyway. This is a safety for trying to scrape from webpages 
+sys.setrecursionlimit(50000)
+#
+import numpy as np
+#
+# alright let's ask the user what webpage they want
+# this will be entered from the command line 
+webpageName=raw_input("Enter URL for scraping here: ")
+#
+# 
